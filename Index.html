@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Planet Guide</title>
+
+    <style>
+        body {
+            background-color: black;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        #planets {
+            margin-bottom: 20px;
+        }
+
+        /* Planet names */
+        .planet {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .planet:hover {
+            transform: scale(1.2);
+        }
+
+        /* Planet colors */
+        .mercury {
+            color: #A9A9A9;
+        }
+
+        .venus {
+            color: #E6A23C;
+        }
+
+        .earth {
+            color: #2E8BFF;
+        }
+
+        .mars {
+            color: #FF5733;
+        }
+
+        .jupiter {
+            color: #D2A679;
+        }
+
+        .saturn {
+            color: #E8D39E;
+        }
+
+        .uranus {
+            color: #66E0E8;
+        }
+
+        .neptune {
+            color: #4169E1;
+        }
+
+        /* Iframe */
+        iframe {
+            width: 90%;
+            height: 500px;
+            border: 2px solid white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cosmic Planet Guide</h1>
+
+    <!-- Planet names -->
+    <div id="planets">
+
+        <div
+            class="planet mercury"
+            onclick="showPlanet('Mercury.html')">
+            Mercury
+        </div>
+
+        <div
+            class="planet venus"
+            onclick="showPlanet('Venus.html')">
+            Venus
+        </div>
+
+        <div
+            class="planet earth"
+            onclick="showPlanet('Earth.html')">
+            Earth
+        </div>
+
+        <div
+            class="planet mars"
+            onclick="showPlanet('Mars.html')">
+            Mars
+        </div>
+
+        <div
+            class="planet jupiter"
+            onclick="showPlanet('Jupiter.html')">
+            Jupiter
+        </div>
+
+        <div
+            class="planet saturn"
+            onclick="showPlanet('Saturn.html')">
+            Saturn
+        </div>
+
+        <div
+            class="planet uranus"
+            onclick="showPlanet('Uranus.html')">
+            Uranus
+        </div>
+
+        <div
+            class="planet neptune"
+            onclick="showPlanet('Neptune.html')">
+            Neptune
+        </div>
+
+    </div>
+
+    <!-- Planet information appears here after clicking -->
+    <iframe
+        id="planetFrame"
+        title="Planet Information"
+        style="display: none;">
+    </iframe>
+
+    <script>
+
+        function showPlanet(page) {
+
+            const iframe = document.getElementById("planetFrame");
+
+            // Load the selected planet's HTML page
+            iframe.src = page;
+
+            // Show the iframe
+            iframe.style.display = "inline-block";
+        }
+
+    </script>
+
+</body>
+</html>
